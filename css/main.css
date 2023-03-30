@@ -33,7 +33,7 @@
 
 #footer {
     margin-bottom: 0;
-    margin-top: 1000px;
+    margin-top: 200px;
     border-bottom: none;
     border-top: 7px solid silver;
     float: left;
@@ -68,3 +68,33 @@
     border-radius: 50%;
     position: absolute;
 }
+
+#nav {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#nav li {
+    display: inline;
+    background: #fafafa;
+    border: 1px solid silver;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#nav li:hover {
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    border-color: #fafafa;
+}
+
+#nav li:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+
