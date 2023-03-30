@@ -1,5 +1,9 @@
+* {
+    margin: 0;
+}
+
 .wrap{
-    background: linear-gradient(45deg, #a6c0fe, #f68084);
+    background: radial-gradient(green,darkorange);
     padding: 10px;
     display: flex;
     align-items: center;
