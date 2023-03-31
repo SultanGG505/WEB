@@ -1,0 +1,68 @@
+body {
+    background-image:linear-gradient(to left, lime, white);
+    padding: 20px;
+}
+h1{
+    font-size: 40px;
+}
+h3 {
+    font-size:28px
+}
+.main {
+    margin:20px;
+}
+.main > div{
+    margin-bottom: 30px;
+}
+.text_head{
+    color:black;
+    text-shadow: 4px 2px 8px;
+}
+.text{
+    font-size: 20px;
+}
+.btn {
+    background-color: darkgreen;
+    border: 4px solid red;
+    color:wheat;
+}
+.btn:hover {
+    cursor:pointer;
+    background-color: black;
+}
+.hidden{
+    display:none;
+}
+
+div.date {
+    width: 350px;
+    height: 50px;
+    border-bottom:4px solid rgb(0, 115, 168);
+}
+div.date > p {
+    text-align:center;
+    vertical-align:bottom;
+    display:table-cell;
+}
+.second_table {
+    background-image:linear-gradient(to top,rgba(0, 0, 0,0), rgb(59, 59, 59));
+    box-shadow: 10px 5px 10px  blue;
+}
+.second_table td:last-child,td:nth-last-child(2)  {
+    background-color: red;
+    text-align: center;
+}
+/*.before_d {*/
+/*    text-decoration:line-through rgb(75, 71, 71);*/
+/*}*/
+.second_table td {
+    text-align: center;    
+}
+.current_day {
+    border-radius: 45%;
+    border:2px solid red;
+    outline: none;
+}
+/*.not_cur_month {*/
+/*    color:rgb(126, 126, 126);*/
+/*}*/
