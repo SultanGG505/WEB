@@ -35,8 +35,8 @@ h3 {
 }
 
 div.date {
-    width: 350px;
-    height: 50px;
+    width: 590px;
+    height: 200px;
     border-bottom:4px solid rgb(0, 115, 168);
 }
 div.date > p {
