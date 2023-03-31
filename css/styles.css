@@ -1,0 +1,148 @@
+:root {
+    --light-color:#ebe4de;
+	--light-color-hover:#d9cdc3;
+	--dark-color:#294046;
+	--dark-color-hover:#0c1517;
+	--contrast-color:#b0897a;
+	--contrast-color-hover:#785649;
+	
+	--normal-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	--small-txt:0.8em;
+	--norm-txt:1.2em;
+	--big-txt:1.6em;
+	
+	--fonter: 'Nunito', sans-serif;
+}
+
+body {
+	font-size:var(--norm-txt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(images/tBG.png);
+	font-family: var(--fonter);
+	color:var(--dark-color);
+	margin:0px;
+}
+
+.content{
+	text-align: center;
+	width:90%;
+	background-color:var(--light-color);
+	padding:20px;
+	box-shadow: var(--normal-shadow);
+}
+
+.main-layout{
+	
+}
+
+.column{
+	display:flex;
+	flex-direction: column;
+    min-height: 100%;
+	flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+
+.w-size-60 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.w-size-40 {
+    flex: 0 0 66.66666667%;
+    max-width: 66.66666667%;
+}
+
+.w-size-20 {
+    flex: 0 0 33.33333333%;
+    max-width: 33.33333333%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.row{
+	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 100%;
+    min-height: fit-content;
+    max-width: 100%;
+	padding:20px;
+}
+
+.row > * {
+    max-height: 100%;
+    min-height: -webkit-fit-content;
+    min-height: fit-content;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-color-hover);
+    min-height: 100%;
+    max-width: 100%;
+    background-clip: padding-box;
+    justify-content: center;
+	overflow: hidden;
+}
+
+img{
+	max-height:400px;
+	object-fit: cover;
+	width: 28vw
+}
+p{
+	font-size:var(--norm-txt);
+}
+
+.circle{
+	border-radius:100%;
+	width:auto;
+	box-shadow: var(--normal-shadow)
+}
+
+.mini{
+	margin-top:20px;
+	min-height:100px;
+	max-height:200px
+}
+
+.v-center{
+	display:flex;
+	flex-direction:column;
+}
+
+.up-section{
+	min-height:250px;
+}
+
+.wide{
+	width:100%;
+	max-height:300px;
+}
+
+@media (max-width: 800px) {
+  .row{
+	display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+  .w-size-20, .w-size-40{
+	flex: 0 0 100%;
+    max-width: 100%;
+	width:100%
+  }
+  img, .wide{
+	  width: 91vw
+  }
+}
