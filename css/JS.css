@@ -1,68 +1,84 @@
-body {
-    background-image:linear-gradient(to left, lime, white);
-    padding: 20px;
+@import url("palette.css");
+
+body, div {
+	background-color:var(--main-color);
+	color:var(--contrast);
+	font-family:var(--mFont);
+	
+	display: flex;
+	flex-direction: column;
+    align-items: center;
 }
-h1{
-    font-size: 40px;
+ .hidden {
+	 display:none;
+ }
+ 
+ .second_table td {
+    text-align: center;    
 }
-h3 {
-    font-size:28px
-}
+
 .main {
     margin:20px;
 }
 .main > div{
     margin-bottom: 30px;
 }
-.text_head{
-    color:black;
-    text-shadow: 4px 2px 8px;
-}
+
 .text{
-    font-size: 20px;
+    font-size: 2.2vh;
 }
 .btn {
-    background-color: darkgreen;
-    border: 4px solid red;
-    color:wheat;
+    background-color: var(--accent);
+	outline: none;
+	border: none;
+	border-radius:10px;
+	padding:5px 20px;
 }
 .btn:hover {
     cursor:pointer;
-    background-color: black;
+    opacity:0.9;
 }
 .hidden{
     display:none;
 }
 
 div.date {
-    width: 590px;
-    height: 200px;
-    border-bottom:4px solid rgb(0, 115, 168);
+    width: 100%;
+    height: 40px;
+    border-bottom:4px solid var(--accent);
+	
 }
+
 div.date > p {
     text-align:center;
     vertical-align:bottom;
     display:table-cell;
 }
+
 .second_table {
-    background-image:linear-gradient(to top,rgba(0, 0, 0,0), rgb(59, 59, 59));
-    box-shadow: 10px 5px 10px  blue;
+    background-color:var(--fields);
+	border-collapse: collapse;
+	border: 1px solid grey;
 }
+
 .second_table td:last-child,td:nth-last-child(2)  {
-    background-color: red;
-    text-align: center;
+    background-color: var(--accent);
 }
-/*.before_d {*/
-/*    text-decoration:line-through rgb(75, 71, 71);*/
-/*}*/
-.second_table td {
-    text-align: center;    
+.second_table td:first-child,.second_table td:nth-child(2),.second_table td:nth-child(3),.second_table td:nth-child(4){
+    background-color: var(--fields);
 }
+
+th, td {
+   border: 1px solid grey;
+   padding: 12px;
+}
+
 .current_day {
-    border-radius: 45%;
-    border:2px solid red;
-    outline: none;
+    border:2px solid var(--accent);
 }
-/*.not_cur_month {*/
-/*    color:rgb(126, 126, 126);*/
-/*}*/
+
+.row {
+	flex-direction: row;
+	justify-content: space-between;
+	margin:10px;
+}
