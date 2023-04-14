@@ -37,10 +37,35 @@
 
     </div>
 
+    <div  class="4rd">
+        <button id="btn_4" class="text btn" >Задание 4</button>
+        <div id="task4" style="display: none">
+            <div style="background-color: #000;"    class="square"></div>
+            <div style="background-color: #ff0000;" class="square"></div>
+            <div style="background-color: #00ff0d;" class="square"></div>
+            <div style="background-color: #0011ff;" class="square"></div>
+            <div style="background-color: #ff04de;" class="square"></div>
+            <div style="background-color: #ffe600;" class="square"></div>
+            <button style="background-color: rgb(173, 11, 11); height:30px;
+				width: 30px;" onclick="startTimer()"> Del </button>
+        </div>
+        <script>
+            function hideRandomSquare() {
+                var squares = document.getElementsByClassName("square");
+                var randomIndex =  Math.floor(Math.random() * squares.length);
+                var square = squares[randomIndex];
+                square.remove();
+            }
+            function startTimer() {
+                setInterval(hideRandomSquare, 120);
+            }
+        </script>
+    </div>
 </div>
 
 <script type="text/javascript" src="scripts/script1.js"></script>
 <script type="text/javascript" src="scripts/script2.js"></script>
 <script type="text/javascript" src="scripts/script3.js"></script>
+<script type="text/javascript" src="scripts/script4.js"></script>
 </body>
 </html>

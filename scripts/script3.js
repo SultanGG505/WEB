@@ -14,5 +14,6 @@
         } else {
             div.style.display = "block";
         }
-    });
+    }
+    );
 }());

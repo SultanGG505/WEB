@@ -9,6 +9,13 @@ body, div {
 	flex-direction: column;
     align-items: center;
 }
+
+.square {
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    display: table;
+}
  /*.hidden {*/
 	/* display:none;*/
  /*}*/
