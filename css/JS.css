@@ -107,3 +107,32 @@ img {
     border: 2px solid var(--contrast);
     margin: 20px;
 }
+
+.task8 {
+    width: 500px;
+    height: 309px;
+}
+
+.task8_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#task8_img {
+    margin-top: 20px;
+    width: 500px;
+    height: 309px;
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: 20;
+}
+
+#task8_text {
+    opacity: 1;
+    color: white;
+    font-weight: 300;
+    font-size: 30px;
+    z-index: 10;
+    position: absolute;
+}
