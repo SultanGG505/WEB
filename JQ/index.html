@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="style.css">
+<title>Регистрация юзера</title>
+
+</head>
+
+
+<body>
+<h1>Регистрация</h1>
+
+
+<div class="registration-form-container">
+  <form id="registration-form">
+    <label for="name"  >Имя:</label>
+    <input type="text" id="name" name="name"  required class="form-input">
+
+    <label for="email" >Email:</label>
+    <input type="email" id="email" name="email" required class="form-input">
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required class="form-input">
+
+    <label for="confirm-password">Подтвердите пароль:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required class="form-input">
+
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" name="age" required class="form-input">
+
+    <button type="submit"  class="registration-form act">Register</button>
+  </form>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('#registration-form').submit(function(event) {
+      // Остановить отправку формы
+      event.preventDefault();
+
+      // Получить значения полей формы
+      var name = $('#name').val().trim();
+      var email = $('#email').val().trim();
+      var password = $('#password').val().trim();
+      var confirmPassword = $('#confirm-password').val().trim();
+
+      var age = $('#age').val().trim();
+
+      // Проверить, что поля не пустые
+      if (name === '' || email === '' || password === '' || confirmPassword === '' || gender === '' || age === '') {
+        alert('Заполните все поля');
+        return;
+      }
+
+      // Проверить, что пароль совпадает с подтверждением пароля
+      if (password !== confirmPassword) {
+        alert('Пароли не совпадают');
+        return;
+      }
+
+      // Проверить, что email имеет правильный формат
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Некорректный email');
+        return;
+      }
+
+      // Проверить, что возраст является числом
+      if (isNaN(age)) {
+        alert('Возраст введите');
+        return;
+      }
+
+      // Проверить, что возраст находится в диапазоне от 18 до 120 лет
+      if (age < 18 || age > 120) {
+        alert('Вам должно быть от 18 до 120');
+        return;
+      }
+
+      // Проверить, что пароль содержит хотя бы одну цифру и одну букву
+      var passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z])[a-zA-Z\d]{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert('Пароль должен содержать хотя бы одну букву и цифру, длина от 8 символов');
+        return;
+      }
+    })
+  }
+  )
+
+
+
+</script>
+</body>
+</html>
