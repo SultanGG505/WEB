@@ -1,3 +1,4 @@
+(function () {
 document.querySelector('#fio').addEventListener('input', function (event) {
     const fioInput = event.target;
     const fioRegex = /^(?!Левин Валентин)[А-ЯЁ][а-яё]+ [А-ЯЁ][а-яё]+( [А-ЯЁ][а-яё]+)?$/;
@@ -262,3 +263,4 @@ btn.addEventListener("click", () => {
         div.style.display = "none";
     }
 });
+}());
